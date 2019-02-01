@@ -95,7 +95,7 @@ return [
             'port' => $port,
             'database' => $databse,
             'username' => $username,
-            'password' => $username,
+            'password' => $password,
             'charset' => 'utf8',
             'prefix' => '',
             'schema' => 'public',
