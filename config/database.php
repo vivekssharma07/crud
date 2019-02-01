@@ -1,5 +1,5 @@
 <?php
-$dbopts = parse_url(getenv('HEROKU_POSTGRESQL_PURPLE_URL'));
+$dbopts = parse_url(getenv('HEROKU_POSTGRESQL_PUCE_URL'));
 $host = $dbopts["host"] ?? null;
 $username = $dbopts["user"] ?? null;
 $password = $dbopts["pass"] ?? null;
@@ -88,19 +88,18 @@ return [
             'prefix' => '',
             'prefix_indexes' => true,
         ],
-        
+
         'prod_mysql' => [
             'driver' => 'pgsql',
             'host' => $host,
             'port' => $port,
             'database' => $databse,
             'username' => $username,
-            'password' => $password,
+            'password' => $username,
             'charset' => 'utf8',
             'prefix' => '',
-            'prefix_indexes' => true,
             'schema' => 'public',
-            'sslmode' => 'prefer',
+            'sslmode' => 'require',
         ],
 
     ],
